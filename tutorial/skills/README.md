@@ -1,12 +1,14 @@
 # How to Use Skills in Claude Code
 
-Skills are reusable, specialized workflows that extend Claude's capabilities beyond its defaults. This guide walks you through finding, invoking, and creating skills.
+Skills are reusable, specialized workflows that extend Claude's capabilities beyond its defaults. They act as encapsulated tools, combining prompt templates and execution environments into a single command. This guide walks you through finding, invoking, and creating skills to supercharge your workflow.
 
 ---
 
 ## 1. What Is a Skill?
 
-A **skill** is a structured prompt (stored as a Markdown file) that encodes a specific workflow, tool integration, or area of domain expertise. Skills are invoked via slash commands and can accept arguments to customize their behavior.
+A **skill** is a structured meta-prompt (stored as a Markdown file) that encodes a specific workflow, tool integration, or area of domain expertise. Instead of typing out repetitive instructions for complex tasks, skills allow you to trigger multi-step, context-aware actions instantly. 
+
+Skills can execute local terminal commands, read project files, scaffold architecture, and accept dynamic arguments. They are typically stored globally in `~/.claude/skills/` or locally within a project repository at `./.claude/skills/`.
 
 For a full reference of available built-in skills and their categories, see [claude-code-skills.md](./claude-code-skills.md).
 
@@ -14,7 +16,7 @@ For a full reference of available built-in skills and their categories, see [cla
 
 ## 2. Invoking a Skill
 
-Skills are triggered with a leading `/` followed by the skill name:
+Skills are triggered in the Claude Code interface with a leading `/` followed by the skill name:
 
 ```
 /skill-name
