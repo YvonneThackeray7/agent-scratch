@@ -10,6 +10,7 @@ Claude is capable of interacting with tools and functions, allowing you to exten
   [form](https://forms.gle/BFnYc6iCkWoRzFgk7).
 </Tip>
 
+
 <Tip>
 **Guarantee schema conformance with strict tool use**
 
@@ -163,6 +164,7 @@ public class GetWeatherExample {
         System.out.println(message);
     }
 }
+
 ```
 
 </CodeGroup>
@@ -175,7 +177,7 @@ Claude supports two types of tools:
 
 1. **Client tools**: Tools that execute on your systems, which include:
    - User-defined custom tools that you create and implement
-   - Anthropic-defined tools like [computer use](/docs/en/agents-and-tools/tool-use/computer-use-tool) and [text editor](/docs/en/agents-and-tools/tool-use/text-editor-tool) that require client implementation
+   - Anthropic-defined tools like [computer use](/docs/en/agents-and-tools/tool-use/computer-use-tool) and [text editor](/docs/en/agents-and-tools/tool-use/text-editor-tool) that require client implementation 
 
 2. **Server tools**: Tools that execute on Anthropic's servers, like the [web search](/docs/en/agents-and-tools/tool-use/web-search-tool) and [web fetch](/docs/en/agents-and-tools/tool-use/web-fetch-tool) tools. These tools must be specified in the API request but don't require implementation on your part.
 
@@ -205,7 +207,8 @@ Integrate client tools with Claude in these steps:
     - Claude analyzes the tool results to craft its final response to the original user prompt.
   </Step>
 </Steps>
-Note: Steps 3 and 4 are optional. For some workflows, Claude's tool use request (step 2) might be all you need, without sending results back to Claude.
+
+Note: Steps 3 and 4 are *optional*. For some workflows, Claude's tool use request (step 2) might be all you need, without sending results back to Claude.
 
 ### Server tools
 
